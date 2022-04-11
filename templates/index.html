@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLASK</title>
+</head>
+<body>
+  <h1>Olá Mundo 2! Tudo bem, {{nome}}?</h1>
+  <p> 5 * 3 = {{5 * 3}}</p>
+  {% if 3 > 2 %}
+    <p>3 é maior que 2</p>
+  {% endif %}
+  <ul>
+    {% for i in range(11) %}
+      <li>{{i}}</li>
+    {% endfor %}
+  </ul>
+  {% if frutas %}
+    <ul>
+      {% for i in frutas %}
+        <li>Fruta: {{i}}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Não há nenhuma fruta na lista </p>
+  {% endif %}
+  <div>
+    <p>Formulário tipo <a href="{{ url_for('formulario_get') }}">GET</a></p>
+    <p>Formulário tipo <a href="{{ url_for('formulario_post') }}">POST</a></p>
+    <p>Formulário novo <a href="{{ url_for('formuser') }}">aqui!</a></p>
+  </div>
+</body>
+</html>

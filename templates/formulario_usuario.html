@@ -1,0 +1,27 @@
+<form action="{{ url_for('info_user') }}" method="post">
+  <fieldset>
+    <legend>Usuário:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <p>Favorite color:</p>
+    <input list="colors" name="colors">
+      <datalist id="colors">
+        <option value="Orange"></option>
+        <option value="Red"></option>
+        <option value="Green"></option>
+        <option value="Blue"></option>
+      </datalist>
+    <p for="gender">Gender:</p>
+    <input type="radio" id="male" name="gender_choice" value="male">
+    <label for="male">Male</label><br>
+
+    <input type="radio" id="female" name="gender_choice" value="female">
+    <label for="female">Female</label>
+    <br><br>
+    <input type="submit" value="Send">
+  </fieldset>
+</form>
